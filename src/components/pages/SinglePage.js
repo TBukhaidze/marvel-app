@@ -14,11 +14,13 @@ const SinglePage = ({ Component, dataType }) => {
 
   useEffect(() => {
     updateData();
+    // eslint-disable-next-line
   }, [id]);
 
   const updateData = () => {
     clearError();
 
+    // eslint-disable-next-line
     switch (dataType) {
       case "comic":
         getComic(id).then(onDataLoaded);
